@@ -11,7 +11,10 @@ export default defineConfig({
             });
             res.end('Hello after 3 seconds (setTimeout)')
           }, 3000);
-        }
+        },
+        // The error message says a target is required, but
+        // uncommenting this completely breaks the proxy.
+        //target: 'http://not.localhost'
       }
     }
   }
